@@ -7,16 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee - Cafe</title>
 
+    <!-- ============ Css Sheet =================== -->
+
     <link rel="stylesheet" href="style.css">
 
+    <!-- ======================= slider sheet ============= -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
     <!-- =============== Icon link=========================== -->
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
     <script src="https://kit.fontawesome.com/64af702e3f.js" crossorigin="anonymous"></script>
+
+
+
 </head>
 
 <body>
@@ -26,11 +32,12 @@
     <header>
         <section class="header">
 
-            <i class="fa-solid fa-bars menu_bar"></i>
+            <i class="fa-solid fa-bars menu_bar" id="navBar"></i>
             <a href="#" class="logo"> Coffee </a>
-
-            <nav class="nav">
-
+            
+            <nav class="nav" id="nav">
+                <i class="fa-solid fa-xmark close_bar" id="closeBar"></i>
+                
                 <a href="#header">Home</a>
                 <a href="#about">About</a>
                 <a href="#menu">Menu</a>
@@ -50,6 +57,8 @@
                     <img src="utilities/Pfp.png" alt="" class="pfp">
                 </span>
             </div>
+
+
 
         </section>
 
@@ -92,15 +101,15 @@
         </section>
 
 
-        <section class="header_content" id="header">
+        <section class="header_content translate" data-speed="0.1" id="header">
             <div class="header_container ">
                 <div class="info">
-                    <h3>Coffee make us</h3>
-                    <h3>user friendly</h3>
+                    <h3 class="translate" data-speed="0.3">Coffee make us</h3>
+                    <h3 class="translate" data-speed="0.2">user friendly</h3>
                 </div>
 
-                <div class="btn">
-                    <a href="#">Shop Here</a>
+                <div class="btn translate" data-speed="0.01">
+                    <a href="#" >Shop Here</a>
                 </div>
 
             </div>
@@ -122,7 +131,7 @@
 
         <section class="main">
 
-            <div class="about">
+            <div class="about" id="about">
                 <div class="container">
                     <div class="about_img">
                         <img src="utilities/about-img.png" alt="">

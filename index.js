@@ -1,6 +1,83 @@
 console.log("Success")
 
 
+// ======================================= Nav Bar =============================================
+
+const navIcon = document.getElementById('navBar'),
+      nav = document.getElementById('nav'),
+      closeBar = document.getElementById('closeBar'),
+      translate = document.querySelectorAll(".translate"),
+      img = document.querySelector('.container .about_img '),
+      secondImg = document.querySelector('.second .about_img ')
+
+let about = document.getElementById('about')
+
+// ======================================== uniVersal ================================ 
+
+let about_Height = about.offsetHeight;
+console.log(about_Height)
+
+// ============================== for navBar =======================================
+
+navIcon.onclick = () => {
+  nav.style.top = '0rem';
+  // closeBar.classList.add('.close_bar_active')
+  console.log('success')
+}
+
+closeBar.onclick = () => {
+  nav.style.top = '-100rem'
+}
+
+
+window.addEventListener('scroll',()=>{
+  let scroll = window.pageYOffset;
+  // console.log(scroll)
+  
+  let aboutY = about.getBoundingClientRect();
+  // console.log(aboutY.top)
+
+  translate.forEach(element =>{
+    let speed = element.dataset.speed;
+    element.style.transform = `translateY(-${scroll * speed}px)`
+  })
+
+  img.style.transform = `translateY(${scroll/(about_Height + aboutY.top) * -18 }rem)`
+  secondImg.style.transform = `translateY(${scroll/(about_Height + aboutY.top) * -10 +8}rem)`
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ================================================= Review Slider ============================================
 let cart = document.getElementById('shopping_cart');
 
 let list = document.getElementById('list_items')
