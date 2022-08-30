@@ -645,6 +645,10 @@ html {
         font-size: 4rem;
     }
 
+    .header_content{
+        background-position: center;
+    }
+
     .container .about_img img{
         width: 22rem;
     }
