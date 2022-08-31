@@ -11,6 +11,7 @@ const navIcon = document.getElementById('navBar'),
       secondImg = document.querySelector('.second .about_img ')
 
 let about = document.getElementById('about')
+const navLink = document.querySelectorAll('.nav-link')
 
 // ======================================== uniVersal ================================ 
 
@@ -29,6 +30,15 @@ closeBar.onclick = () => {
   nav.style.top = '-100rem'
 }
 
+navLink.forEach(ele => {
+  console.log('clicked')
+
+  ele.onclick = () =>{
+  nav.style.top = '-100rem'
+  }
+})
+
+
 
 window.addEventListener('scroll',()=>{
   let scroll = window.pageYOffset;
@@ -43,7 +53,7 @@ window.addEventListener('scroll',()=>{
   })
 
   img.style.transform = `translateY(${scroll/(about_Height + aboutY.top) * -18 }rem)`
-  secondImg.style.transform = `translateY(${scroll/(about_Height + aboutY.top) * -10 +8}rem)`
+  secondImg.style.transform = `translateY(${scroll/(about_Height + aboutY.top) * -8 +5 }rem)`
 
 })
 
